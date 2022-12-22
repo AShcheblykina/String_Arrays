@@ -18,7 +18,6 @@ public class StatsService {
 
     public int peakSales(long[] sales) {
         int maximumMonth = 0;
-        long averageAmount = averageAmount(sales);
         long maximumSale = sales[maximumMonth];
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] >= maximumSale) {
@@ -31,7 +30,6 @@ public class StatsService {
 
     public int miniSales(long[] sales) {
         int minimumMoth = 0;
-        long averageAmount = averageAmount(sales);
         long minimumSale = sales[minimumMoth];
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] <= minimumSale) {
@@ -44,7 +42,6 @@ public class StatsService {
 
     public int belowAverage(long[] sales) {
         int counter = 0;
-        long averageAmount = averageAmount(sales);
         for (long sale : sales) {
             if (sale < averageAmount(sales)) {
                 counter++;
@@ -56,7 +53,6 @@ public class StatsService {
 
     public int aboveAverage(long[] sales) {
         int counter = 0;
-        long averageAmount = averageAmount(sales);
         for (long sale : sales) {
             if (sale > averageAmount(sales)) {
                 counter++;
